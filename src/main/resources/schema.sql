@@ -21,7 +21,7 @@ create table if not exists gallery (
 create table if not exists artist_gallery (
     artistId INT,
     galleryId INT,
-    PRIMARY KEY (aritstId, galleryId),
+    PRIMARY KEY (artistId, galleryId),
     FOREIGN KEY (artistId) REFERENCES artist(id),
     FOREIGN KEY (galleryId) REFERENCES gallery(id)
 );

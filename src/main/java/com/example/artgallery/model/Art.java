@@ -23,8 +23,8 @@ public class Art {
     @Column(name = "id")
     private int artId;
 
-    @Column(name = "name")
-    private String artName;
+    @Column(name = "title")
+    private String artTitle;
 
     @Column(name = "theme")
     private String theme;
@@ -44,12 +44,12 @@ public class Art {
         this.artId = artId;
     }
 
-    public String getArtName() {
-        return artName;
+    public String getArtTitle() {
+        return artTitle;
     }
 
-    public void setArtName(String artName) {
-        this.artName = artName;
+    public void setArtTitle(String artTitle) {
+        this.artTitle = artTitle;
     }
 
     public String getTheme() {

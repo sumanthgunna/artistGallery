@@ -54,16 +54,16 @@ public class GalleryJpaService implements GalleryRepository {
         for (Artist artist : gallery.getArtists()) {
             artistIds.add(artist.getArtistId());
         }
+
         List<Artist> artists = artistJpaRepository.findAllById(artistIds);
         gallery.setArtists(artists);
 
         for (Artist artist : artists) {
             artist.getGalleries().add(gallery);
         }
-        artistJpaRepository.saveAll(artists);
-        Gallery savedGallery = galleryJpaRepository.save(gallery);
 
-        return savedGallery;
+        artistJpaRepository.saveAll(artists);
+        return galleryJpaRepository.save(gallery);
     }
 
     @Override

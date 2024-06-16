@@ -64,8 +64,8 @@ public class ArtJpaService implements ArtRepository {
     public Art updateArt(int artId, Art art) {
         try {
             Art newArt = artJpaRepository.findById(artId).get();
-            if (art.getArtName() != null) {
-                newArt.setArtName(art.getArtName());
+            if (art.getArtTitle() != null) {
+                newArt.setArtTitle(art.getArtTitle());
             }
             if (art.getTheme() != null) {
                 newArt.setTheme(art.getTheme());
@@ -73,7 +73,7 @@ public class ArtJpaService implements ArtRepository {
             if (art.getArtist() != null) {
                 int newArtistId = art.getArtist().getArtistId();
                 Artist newArtist = artistJpaRepository.findById(newArtistId).get();
-                art.setArtist(newArtist);
+                newArt.setArtist(newArtist);
             }
             return artJpaRepository.save(newArt);
         } catch (Exception e) {

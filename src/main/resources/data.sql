@@ -3,7 +3,7 @@ insert into artist (name, genre) values('Vincent van Gogh', 'Post-Impressionism'
 insert into artist (name, genre) values('Pablo Picass', 'Cubism');
 insert into artist (name, genre) values('Edward Hopper', 'American Modernism');
 
-insert into art (title, theme, artistId) values('The Flight Study', 'Studie of Bird Wings' 1);
+insert into art (title, theme, artistId) values('The Flight Study', 'Studie of Bird Wings', 1);
 insert into art (title, theme, artistId) values('Mona Lisa 2.0', 'Renaissance Portrait', 1);
 insert into art (title, theme, artistId) values('Starry Countryside', 'Night Landscape', 2);
 insert into art (title, theme, artistId) values('Sunflower Impressions', 'Floral', 2);
